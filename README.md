@@ -27,13 +27,8 @@ Le travail a été divisé en trois phases :
 
 ## Auteurs
 
-[Ghiles FEGHOUL] - Université de Rouen
-
-[Yacine HOUMOR] - Université de Rouen
-
-
-[Ghiles FEGHOUL]:(mailto:ghiles.feghoul@gmail.com)
-[Yacine HOUMOR]:(mailto:yacine.houmor@gmail.com)
+* [Ghiles FEGHOUL](mailto:ghiles.feghoul@gmail.com)
+* [Yacine HOUMOR](mailto:yacine.houmor@gmail.com)
 
 ## Crédits
 [perceptron] - perceptron
