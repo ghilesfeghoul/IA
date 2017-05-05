@@ -30,7 +30,10 @@ Le travail a été divisé en trois phases :
 * [Ghiles FEGHOUL](mailto:ghiles.feghoul@gmail.com)
 * [Yacine HOUMOR](mailto:yacine.houmor@gmail.com)
 
-## Crédits
+## Références
 [perceptron] - perceptron
 
+[Apprentissage_JeuDesBatons] - github
+
 [perceptron]: <https://fr.wikipedia.org/wiki/Perceptron> 
+[Apprentissage_JeuDesBatons]: <https://github.com/QuentinBrodier/Apprentissage_JeuDesBatons>

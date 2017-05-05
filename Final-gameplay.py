@@ -1,27 +1,26 @@
 from Game import *
-from Neuron import *
 from Player import *
 import pickle
 
-NB_STICKS = 15
+NB_BATON = 15
 
-jeu = Game(NB_STICKS)
+jeu = Game(NB_BATON)
 
-# PLAYER NAME
-playerName = input('Enter your name : \n')
+# Nom du joueur (l'humain)
+playerName = input('Entrez votre nom : \n')
 
-# GAME MODE
+# Mode de jeu (easy, medium, hard)
 gameMode = ""
 while (gameMode != "easy") and (gameMode != "medium") and (gameMode != "hard"):
-    gameMode = input('Choose a game mode (easy,medium,hard) : \n')
+    gameMode = input('Choisir la difficulté (easy, medium, hard) : \n')
 
-# PLAYER INSTANCIATION
-player1 = HumanPlayer(playerName)
-player2 = CPUPlayer("La Machine", gameMode, NB_STICKS)
+# Instanciation des joueurs
+human = HumanPlayer(playerName)
+machine = CPUPlayer("La Machine", gameMode, NB_BATON)
 
-if (gameMode == "hard"):
+if gameMode == "hard":
     with open('reseau', 'rb') as inp: ns = pickle.load(inp)
-    player2.setNeuronNetwork(ns)
+    machine.setNeuronNetwork(ns)
 
-# START GAME
-jeu.start(player1, player2, True)
+# Début du jeu
+jeu.start(human, machine, True)

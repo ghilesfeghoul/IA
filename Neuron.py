@@ -74,9 +74,9 @@ class Neuron:
             if len(connectionsCopie) == 0:
                 return None
 
-    def testNeuron(self, inValue):
+    def testNeuron(self, neuron):
         # InValue : Neuron suivant à tester - Shift
-        if 1 <= inValue - self.index <= 3:
+        if 1 <= neuron - self.index <= 3:
             return True
         else:
             return False

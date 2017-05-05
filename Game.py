@@ -17,7 +17,7 @@ class Game:
         joueur_courant = Joueur1
 
         while batons > 0:
-            if verbose: print("Baton restants:", batons)
+            if verbose: print("Batons restants:", batons)
             n = joueur_courant.play(batons)
             if n < 1 or n > 3: print("Erreur : vous devez prendre au moins un baton au minimum et 3 au maximum !")
             if verbose: print(joueur_courant.getName(), " a pris", n," baton(s)")

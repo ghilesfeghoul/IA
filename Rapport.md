@@ -36,29 +36,18 @@ Question 8
 		Le but de la méthode de faire jouer l'ordinateur contre lui-même est de faire de l'apprentissage.
 		En effet, avec le réseau de neurones, on va privilégier le chemin par lequel il est passé lorsqu'il 
 		a gagné. On va donc attribuer des récompenses aux synapses que la machine a emprunté lorsqu'elle a 
-		gagnée.
-		On va donc la faire jouer un grand nombre de fois afin qu'elle puisse apprendre d'elle-même et d'être
+		gagné.
+		On va donc la faire jouer un grand nombre de fois afin qu'elle puisse apprendre d'elle-même et de devenir 
 		de plus en plus forte.
 
-		Dans le cas du script 'Test-hard-with-100000-games', on peut remarquer qu'après un grand nombre de parties, 
-		la machine 1 remportera beaucoup plus de victoires que la machine 2, car cette dernière a découvert le "biais", c'est à dire 
-		la technique pour gagner. Et vu que c'est elle qui joue en premier, elle sait se débrouiller pour 
-		gagner.
+		Dans le cas du script 'Test-hard-with-100000-games', on peut remarquer qu'après les 100 000 parties, 
+		la machine 1 remportera beaucoup plus de victoires (environ 90%) que la machine 2, car cette dernière a découvert le "biais", c'est à dire 
+		la technique pour gagner. Et vu que c'est elle qui joue en premier, elle gagne la plupart du temps.
 
 Question 9
 
 		En jouant contre l'ordinateur en mode Hard (et en 2ème joueur), il est impossible de gagner.
 		L'ordinateur fera tout pour nous ammener à 13 batons, puis 9, puis 5 pour ensuite que l'on perde.
-		En effet, 
-			s'il reste 5 batons et que le joueur en choisi 1, l'ordinateur en choisira 3 (Le joueur perd)
-			s'il reste 5 batons et que le joueur en choisi 2, l'ordinateur en choisira 2 (Le joueur perd)
-			s'il reste 5 batons et que le joueur en choisi 3, l'ordinateur en choisira 1 (Le joueur perd)
-		Plus tôt dans la partie,
-			s'il reste 9 batons et que le joueur en choisi 1, l'ordinateur en choisira 3 (il restera 5 batons)
-			s'il reste 9 batons et que le joueur en choisi 2, l'ordinateur en choisira 2 (il restera 5 batons)
-			s'il reste 9 batons et que le joueur en choisi 3, l'ordinateur en choisira 1 (il restera 5 batons)
-
-		Etc.
 
 
 Question Optionnelle
@@ -72,6 +61,9 @@ Question Optionnelle
 		On remarque bien en lançant le script Optionnel que plus les parties avancent et moins les machines font d'erreurs 
 		(puisqu'elles apprennent de leurs parties précédentes).
 
+Solution envisagée
+
 		Une solution qui pourrait être mise en place pour améliorer le réseau de neurone final serait de "punir" certaines "synapses"
-		lorsque la machine perd la partie. En effet, à l'heure actuelle, on récompense seulement lorsque la machine gagne.
-		Le fait de punir certains chemins reviendrai à obtenir plus de chance d'emprunter un chemin qui fera gagner la machine.
+		lorsque la machine perd la partie. 
+		En effet, à l'heure actuelle, on récompense seulement lorsque la machine gagne.
+		Le fait de punir certains chemins reviendrait à obtenir plus de chance d'emprunter un chemin qui fera gagner la machine.
