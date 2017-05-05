@@ -14,6 +14,8 @@ Liste des scripts :
 			   -> MEDIUM VS MEDIUM
 			   -> HARD VS HARD
 			A la fin du mode Hard VS Hard, on enregistre le réseau de neurone dans un fichier sérialisé
+		- AmeliorationParAggregation :
+		    Dans ce fichier, on a crée un script qui permet d'améliorer encore notre réseau de neurones en créant une aggrégation entre 2 réseaux de neurones (réseau d'une machine qui commence en premier en mode 'hard' + réseau d'une machine qui commence en premier en mode 'medium')
 		- Final-gameplay :
 			Jeu final en mode console, on peut entrer notre nom et le mode dans lequel on veut jouer et la partie commence
 			Le mode Hard utilise le fichier sérialisé créé avec le script 3
@@ -44,11 +46,13 @@ Question 8
 		la machine 1 remportera beaucoup plus de victoires (environ 90%) que la machine 2, car cette dernière a découvert le "biais", c'est à dire 
 		la technique pour gagner. Et vu que c'est elle qui joue en premier, elle gagne la plupart du temps.
 
+        On a exploité ces résultats pour mettre en oeuvre le script d'aggrégation
+        
 Question 9
 
 		En jouant contre l'ordinateur en mode Hard (et en 2ème joueur), il est impossible de gagner.
 		L'ordinateur fera tout pour nous ammener à 13 batons, puis 9, puis 5 pour ensuite que l'on perde.
-
+        L'ordinateur utilise l'un des deux fichier (reseau.nmd qui contient les résultats du fichier Test-hard-with-100000-games' et reseau_ameloreAgregat.nmw qui contient les résultats du script d'aggrégation), ce qui rend la tâche difficile à l'humain pour gagner
 
 Question Optionnelle
 
@@ -63,7 +67,4 @@ Question Optionnelle
 
 Solution envisagée
 
-		Une solution qui pourrait être mise en place pour améliorer le réseau de neurone final serait de "punir" certaines "synapses"
-		lorsque la machine perd la partie. 
-		En effet, à l'heure actuelle, on récompense seulement lorsque la machine gagne.
-		Le fait de punir certains chemins reviendrait à obtenir plus de chance d'emprunter un chemin qui fera gagner la machine.
+		Le fichier qui contient le script d'aggrégation est une des solutions pour améliorer le réseau de neurones

@@ -7,13 +7,8 @@ class Game:
         self.batons = nbr_batons
 
     def start(self, Joueur1, Joueur2, verbose):
-        if Joueur2.getMode() == "hard":
-            with open('reseau', 'rb') as inp: ns = pickle.load(inp)
-            Joueur2.setNeuronNetwork(ns)
-
-        if verbose: print("Nouvelle partie [mode "+Joueur2.getMode()+"]")
+        if verbose: print("====Nouvelle partie====")
         batons = self.batons
-
         joueur_courant = Joueur1
 
         while batons > 0:

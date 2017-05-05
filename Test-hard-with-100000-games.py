@@ -19,5 +19,5 @@ else:
     neurons = player2.getNeuronNetwork()
 
 # Enregistrement du réseau de neurones
-with open('reseau', 'wb') as output:
+with open('reseau.nnw', 'wb') as output:
     pickle.dump(neurons, output, pickle.HIGHEST_PROTOCOL)

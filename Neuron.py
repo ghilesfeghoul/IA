@@ -44,6 +44,11 @@ class NeuronNetwork:
         for neuron, score in scores.items():
             print(neuron.asString(), score)
 
+    def agregatTousNeurons(self, netw2):
+        for n1 in self.neurons:
+            for n2 in netw2.neurons:
+                if n1.index == n2.index:
+                    n1.agregatNeuronParNeuron(n2)
 
 class Neuron:
     def __init__(self, network, index):
@@ -101,3 +106,9 @@ class Neuron:
         for c, w in connections.items():
             if upto + w >= r: return c
             upto += w
+
+    def agregatNeuronParNeuron(self, neuron2):
+        for i, j in self.connections.items():
+            for c2, w2 in neuron2.connections.items():
+                if i.index == c2.index:
+                    self.connections[i] += w2
